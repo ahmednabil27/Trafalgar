@@ -162,6 +162,12 @@ nav ul {
     gap:5px;
     align-items: center;
 }
+/* @media (max-width: 375px) {
+     nav {
+        display: none;
+    }
+    
+} */
 nav ul li a {
     color: #1F1534;
     padding: 5px;
@@ -258,6 +264,23 @@ main > section, main > article {
 }
 .providers hr, .download-app hr {
     margin-left: 0;
+}
+@media (max-width: 769px) {
+    /* .providers .sub-heading, .download-app .sub-heading {
+        text-align: center;
+        } */
+        .providers p, .download-app p {
+        text-align: center;
+
+    }
+    .providers h2, .download-app h2 {
+        text-align: center;
+    }
+    .providers hr, .download-app hr {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
 }
 @media (max-width: 768px) { 
 
@@ -366,7 +389,7 @@ main > section, main > article {
     border-radius: var(--card-radius);
     overflow: hidden;
     background-color: white;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, .2);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .2);
 }
 .article-grid > div h3 {
     font-weight: 700;
@@ -404,6 +427,15 @@ footer {
 footer > div:not(:first-child) {
     /* background-color: red; */
     padding-left: 30%;
+}
+@media (max-width: 375px) {
+    footer {
+        padding: var(--section-padding) 20px;
+    }
+    footer > div:not(:first-child) {
+        padding-left: 10px;
+    }
+    
 }
 footer > div:not(:first-child) ul li{
     margin-top: 10px;
