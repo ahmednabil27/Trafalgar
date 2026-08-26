@@ -1,0 +1,426 @@
+:root {
+    --primary: #458FF6;
+    --paragraph-color: #7D7987;
+    --linear-gradient-dark-blue:#5A98F2;
+    --linear-gradient-light-blue:#67C3F3;
+    --card-radius: 20px;
+    --section-padding: 50px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: normal;
+    font-family: "Mulish", sans-serif;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+/* Shared Rules */
+section, article, header{
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {  
+    section, article, header {
+        width: 550px;
+    }
+}
+@media (max-width: 575px) {  
+     section, article, header {
+        width: calc(100% - 40px);
+        margin-left: 20px;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+section, article, header {
+        width: 750px;
+    }
+    
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+ section, article, header {
+        width: 970px;
+    }
+    
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+ section, article, header {
+        width: 1170px;
+    }
+    
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+ section, article, header {
+        width: 1273px;
+    }
+
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    /* display: inline-block; */
+    width: 200px;
+    height: 60px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid var(--primary);
+    border-radius: 55px;
+    color: var(--primary);
+    transition: .3s;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+.btn:hover {
+    background-color: var(--primary);
+    color: white;
+}
+.main-btn {
+    background-color: var(--primary);
+    color: white;
+}
+.sub-heading {
+    text-align: center;
+}
+.sub-heading h2{
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 56px;
+}
+.sub-heading hr {
+    height: 2px;
+    width: 56px;
+    border-radius: 5px;
+    margin: 0 auto 30px;
+    background-color: black;
+}
+p {
+    font-weight: 300;
+    line-height: 30px;
+    color: var(--paragraph-color);
+
+}
+.sub-heading p {
+    text-align: center;
+    font-size: 18px;
+}
+/* start Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+@media (max-width: 768px) {
+     header {
+        flex-direction: column;
+        gap: 20px
+    }
+    
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+header .logo >span {
+    display: inline-block;
+    background-color: var(--primary);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+nav {
+    flex: 1;
+}
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap:5px;
+    align-items: center;
+}
+nav ul li a {
+    color: #1F1534;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+nav ul li a:hover {
+    background-color:#7D798750;
+}
+/* end header */
+/* start hero */
+main > section, main > article {
+    padding: var(--section-padding) 0;
+}
+/* edited */
+.hero-section  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (max-width: 768px) { 
+    .hero-section, .hero-section  {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    
+}
+.hero-section  > div {
+    flex-basis: 48%;
+}
+.hero-section img {
+    width: 100%;
+}
+.hero-heading h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    margin-bottom: 20px;
+}
+.hero-heading p {
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+/* End Hero */
+/* Start Services */
+.services-grid {
+    margin-top: var(--section-padding);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 10px;
+    margin-bottom: 15px;
+    margin: auto;
+}
+.services-grid > .service {
+    background-color: white;
+    padding: 20px ;
+     box-shadow: 0 0 2px rgba(0, 0, 0, .18);
+    border-radius: var(--card-radius);
+}
+.service h3 {
+    margin-top: 10px;
+}
+.service p {
+    line-height: 28px;
+    padding-right: 36px;
+    margin-top: 10px;
+}
+@media (max-width: 768px) { 
+    .service {
+        text-align: center;
+    }
+    
+}
+/* End Services */
+/* Providers */
+
+.providers , .download-app  {
+    display: flex;
+    justify-content: space-between;
+}
+.providers  > div, .download-app  > div {
+    flex-basis: 45%;
+}
+.providers img, .download-app img {
+    width: 100%;
+}
+
+.providers p, .download-app p {
+    text-align: left;
+}
+.providers h2, .download-app h2 {
+    text-align: left;
+}
+.providers hr, .download-app hr {
+    margin-left: 0;
+}
+@media (max-width: 768px) { 
+
+    .providers  {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .providers  > div, .download-app  > div {
+        flex-basis: 48%;
+    }
+
+    .download-app  {
+        flex-direction: column-reverse;
+        gap: 30px;
+
+    }
+
+    .providers .btn, .download-app .btn {
+        display: block;
+        margin: 10px auto;
+
+    }
+}
+/* Testimonials */
+.testimonials > div:first-child{
+    background-image: linear-gradient(to top, var(--linear-gradient-dark-blue), var(--linear-gradient-light-blue));
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 100px));
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: var(--section-padding) 0;
+    border-radius: 24px;
+    max-width: 1120px;
+    margin:  auto;
+}
+.testimonials .sub-heading {
+    grid-column: 1 / 3;
+    color: white;
+    line-height: 48px;
+}
+.testimonials .sub-heading hr {
+    background-color: white;
+}
+.customer-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+@media (max-width: 768px) { 
+    .testimonials >div:first-child {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+    .testimonials .sub-heading {
+        grid-column: 1 / 2;
+    }
+    .customer-info {
+        flex-direction: column;
+    }
+}
+.customer-info span {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+ .opinion-text q {
+    max-width: 430px;
+    color: white;
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 19px;
+}
+
+.slider-controls {
+    display: flex;
+    max-width: 1120px;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+.slider-controls ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+/* End Testimonials */
+
+/* start Articles */
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 15px;
+}
+@media (max-width: 375px) {
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    
+}
+.article-grid > div {
+    --padding-text: 35px;
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .2);
+}
+.article-grid > div h3 {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 32px;
+    margin-top: 15px;
+    padding:0 var(--padding-text);
+}
+.article-grid > div p {
+    line-height: 28px;
+    margin-top: 15px;
+    padding:0 var(--padding-text);
+}
+.article-grid > div a {
+    display: inline-block;
+    line-height: 28px;
+    margin: 15px 0;
+    padding:0 var(--padding-text);
+}
+.article-grid img {
+    width: 100%;
+}
+/* end Articles */
+/* start Footer */
+footer {
+ background-image: linear-gradient(to top,
+  var(--linear-gradient-dark-blue),
+   var(--linear-gradient-light-blue));
+   padding: calc(var(--section-padding) * 2);
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 10px;
+   color: white;
+}
+footer > div:not(:first-child) {
+    /* background-color: red; */
+    padding-left: 30%;
+}
+footer > div:not(:first-child) ul li{
+    margin-top: 10px;
+}
+footer > div:not(:first-child) ul li:first-child{
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+footer > div:not(:first-child) ul li:not(:first-child) a{
+    color: rgba(255, 255, 255, 0.603);
+}
+footer > div:first-child p{
+    color: white;
+    line-height: 1.5;
+}
+footer > div:first-child p:last-child{
+    margin-top: 15px;
+}
+
+/* end Footer */
